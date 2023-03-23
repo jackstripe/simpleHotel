@@ -3,14 +3,18 @@ package com.coherent.task.service;
 import com.coherent.task.entity.Reservation;
 import com.coherent.task.persistency.ReservationStorage;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
     public class ReservationService {
 
+    @Autowired
+    private ReservationStorage storage;
     @PostMapping("/reservation/create")
     public ResponseEntity<ReservationStorage> createReservation(@Valid @RequestBody Reservation reservation){
 
@@ -19,9 +23,9 @@ import java.util.List;
     }
 
     @GetMapping("/reservations")
-    public List<Reservation> getReservations(){
+    public Set<Reservation> getReservations(){
 
-        return null;
+        return storage.getReservations();
     }
 
     @PatchMapping("/reservation/update/{id}")
