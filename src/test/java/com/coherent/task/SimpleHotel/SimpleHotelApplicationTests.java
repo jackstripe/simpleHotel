@@ -1,4 +1,4 @@
-package com.coherent.testtask.SimpleHotel;
+package com.coherent.task.SimpleHotel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
