@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "afcf78a3-7e62-4fc2-94b2-5b6af2a6d4ed",
+		"name": "simpleHotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"clientFullName\" : \"Archundia\",\r\n    \"roomNumber\" : \"203\",\r\n    \"reservationDates\": [\r\n            \"2023-03-23\",\"2023-03-25\"\r\n        ]\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reservation/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Reservations",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Reservations",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"clientFullName\" : \"Archundia\",\r\n    \"roomNumber\" : \"202\",\r\n    \"reservationDates\": [\r\n            \"2023-03-23\",\"2023-03-25\"\r\n        ]\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reservation/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservation",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
