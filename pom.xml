@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.coherent.testtask</groupId>
 	<artifactId>SimpleHotel</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>SimpleHotel</name>
 	<description>Simple Hotel application to work with reservations</description>
 	<properties>
